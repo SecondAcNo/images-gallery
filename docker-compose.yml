@@ -24,7 +24,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: mongoex
-
+    volumes:
+      - mongodb_data:/data/db
   mongo-express:
     image: mongo-express
     restart: always
@@ -35,3 +36,6 @@ services:
       ME_CONFIG_BASICAUTH_ENABLED: true
       ME_CONFIG_BASICAUTH_USERNAME: mongoexuser
       ME_CONFIG_BASICAUTH_PASSWORD: mongoexpass
+
+volumes:
+  mongodb_data:
