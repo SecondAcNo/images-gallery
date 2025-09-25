@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from flask_cors import CORS
 from mongo_client import mongo_client
 
-gallery = mongo_client.garalley
+gallery = mongo_client.gallery
 images_collection = gallery.images
 
 load_dotenv(dotenv_path="./.env.local")
